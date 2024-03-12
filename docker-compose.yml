@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  board-service:
+    build:
+      context: .
+      args:
+        JAR_VERSION: ${JAR_VERSION}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/app

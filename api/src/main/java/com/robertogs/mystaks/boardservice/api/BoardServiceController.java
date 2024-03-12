@@ -14,6 +14,6 @@ public class BoardServiceController {
     @GetMapping
     @Operation(summary = "Get boards")
     public ResponseEntity<String> getBoards(){
-        return new ResponseEntity<>(HttpStatus.OK);
+        return ResponseEntity.status(HttpStatus.OK).body("OK");
     }
 }

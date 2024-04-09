@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.robertogs.mystaks</groupId>
-	<artifactId>boardservice</artifactId>
+	<artifactId>board-service</artifactId>
 	<version>${revision}</version>
-	<name>boardservice</name>
+	<name>board-service</name>
 	<description>Board service</description>
 	<packaging>pom</packaging>
 
@@ -14,6 +14,8 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>
 		<springdoc.version>1.7.0</springdoc.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -54,19 +56,19 @@
 
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>domain</artifactId>
+				<artifactId>board-domain</artifactId>
 				<version>${revision}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>api</artifactId>
+				<artifactId>board-api</artifactId>
 				<version>${revision}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>repository</artifactId>
+				<artifactId>board-infrastructure</artifactId>
 				<version>${revision}</version>
 			</dependency>
 
@@ -93,15 +95,12 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>3.2.3</version>
-<!--				<configuration>-->
-<!--					<source>${java.version}</source>-->
-<!--					<target>${java.version}</target>-->
-<!--				</configuration>-->
 			</plugin>
 
 			<plugin>
@@ -134,9 +133,9 @@
 	</build>
 
 	<modules>
-		<module>domain</module>
-		<module>application</module>
-		<module>api</module>
-		<module>repository</module>
+		<module>board-domain</module>
+		<module>board-application</module>
+		<module>board-api</module>
+		<module>board-infrastructure</module>
 	</modules>
 </project>

@@ -8,5 +8,23 @@ services:
         JAR_VERSION: ${JAR_VERSION}
     ports:
       - "8080:8080"
+    networks:
+      - app-network
     volumes:
       - ./target:/app
+
+#  postgres:
+#    image: postgres:16-alpine
+#    container_name: postgres_container
+#    environment:
+#      - POSTGRES_PASSWORD=postgres
+#    ports:
+#      - "5432:5432"
+#    networks:
+#      - app-network
+#    volumes:
+#      - /home/roberto/Workspace/Postgres/data:/var/lib/postgresql/data
+
+networks:
+  app-network:
+    driver: bridge

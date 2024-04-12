@@ -1,19 +1,18 @@
-package com.robertogs.mytasks.board.persistence.repositories;
+package com.robertogs.mytasks.board.persistence.adapters;
 
 import com.robertogs.mytasks.board.core.models.Board;
 import com.robertogs.mytasks.board.ports.out.InsertBoardOutputPort;
 import com.robertogs.mytasks.board.mapper.BoardMapper;
 import com.robertogs.mytasks.board.persistence.entity.BoardEntity;
-import com.robertogs.mytasks.board.persistence.repositories.providers.BoardJpaRepository;
+import com.robertogs.mytasks.board.persistence.repositories.BoardJpaRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Component
-public class BoardRepositoryImpl implements InsertBoardOutputPort {
+@Primary
+public class InsertBoardAdapter implements InsertBoardOutputPort {
     private final BoardJpaRepository boardRepository;
-    public BoardRepositoryImpl(BoardJpaRepository boardRepository) {
+    public InsertBoardAdapter(BoardJpaRepository boardRepository) {
         this.boardRepository = boardRepository;
     }
 

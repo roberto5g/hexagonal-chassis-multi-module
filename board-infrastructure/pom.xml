@@ -21,11 +21,6 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>board-application</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>board-domain</artifactId>
             <version>${revision}</version>
         </dependency>

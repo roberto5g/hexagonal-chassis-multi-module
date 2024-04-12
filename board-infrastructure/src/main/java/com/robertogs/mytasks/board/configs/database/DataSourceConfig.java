@@ -29,8 +29,6 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource(){
 
-        log.info("URL---------------------- {}",url);
-
         final var jdbc = new DriverManagerDataSource();
         jdbc.setDriverClassName(driverClassName);
         jdbc.setUrl(url);

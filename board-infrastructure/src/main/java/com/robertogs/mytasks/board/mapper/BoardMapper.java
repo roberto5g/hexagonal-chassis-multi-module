@@ -8,6 +8,9 @@ public class BoardMapper {
     public static BoardEntity convert(Board board){
         BoardEntity boardEntity = new BoardEntity();
         boardEntity.setId(board.getId());
+        boardEntity.setTitle(board.getTitle());
+        boardEntity.setDescription(board.getDescription());
+        boardEntity.setOwnerId(board.getOwner().getId());
         return boardEntity;
     }
 

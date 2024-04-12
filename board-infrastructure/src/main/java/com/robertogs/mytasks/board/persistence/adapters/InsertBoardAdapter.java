@@ -8,6 +8,8 @@ import com.robertogs.mytasks.board.persistence.repositories.BoardJpaRepository;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 @Primary
 public class InsertBoardAdapter implements InsertBoardOutputPort {
@@ -19,6 +21,7 @@ public class InsertBoardAdapter implements InsertBoardOutputPort {
     @Override
     public Board insert(Board board) {
         BoardEntity boardEntity = BoardMapper.convert(board);
+        boardEntity.setCreatedAt(LocalDateTime.now());
         return BoardMapper.convert(boardRepository.save(boardEntity));
     }
 

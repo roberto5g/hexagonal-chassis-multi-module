@@ -1,15 +1,12 @@
 package com.robertogs.mytasks.board.core.models;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-public class Board {
-
+public class Comment {
     private Long id;
-    private String title;
     private String description;
-    private User owner;
-    private List<Task> tasks;
+    private User creator;
+    private Task task;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -21,14 +18,6 @@ public class Board {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -37,20 +26,20 @@ public class Board {
         this.description = description;
     }
 
-    public User getOwner() {
-        return owner;
+    public User getCreator() {
+        return creator;
     }
 
-    public void setOwner(User owner) {
-        this.owner = owner;
+    public void setCreator(User creator) {
+        this.creator = creator;
     }
 
-    public List<Task> getTasks() {
-        return tasks;
+    public Task getTask() {
+        return task;
     }
 
-    public void setTasks(List<Task> tasks) {
-        this.tasks = tasks;
+    public void setTask(Task task) {
+        this.task = task;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -69,4 +58,3 @@ public class Board {
         this.updatedAt = updatedAt;
     }
 }
-

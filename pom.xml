@@ -16,6 +16,7 @@
 		<springdoc.version>1.7.0</springdoc.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
 	</properties>
 
 	<dependencyManagement>

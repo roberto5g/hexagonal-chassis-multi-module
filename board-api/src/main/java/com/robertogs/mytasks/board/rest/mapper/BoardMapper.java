@@ -4,20 +4,14 @@ import com.robertogs.mytasks.board.core.models.User;
 import com.robertogs.mytasks.board.rest.dto.request.BoardRequest;
 import com.robertogs.mytasks.board.rest.dto.response.BoardResponse;
 import com.robertogs.mytasks.board.core.models.Board;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-public class BoardMapper {
+@Mapper
+public interface BoardMapper {
 
-    public static Board convert(BoardRequest boardRequest){
-        Board board = new Board();
-        board.setOwner(new User(1L,"teste","teste"));
-        board.setTitle(boardRequest.getTitle());
-        board.setDescription(boardRequest.getDescription());
-        return board;
-    }
-    public static BoardResponse convert(Board board){
-        return BoardResponse.builder().id(board.getId())
-                .name(board.getTitle())
-                .description(board.getDescription())
-                .build();
-    }
+    BoardMapper INSTANCE = Mappers.getMapper( BoardMapper.class );
+
+    Board toBoard(BoardRequest boardRequest);
+    BoardResponse toBoardResponse(Board board);
 }

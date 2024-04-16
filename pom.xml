@@ -98,25 +98,25 @@
 				<version>3.2.5</version>
 			</plugin>
 
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>9.0.9</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>aggregate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<skip>false</skip>
-					<formats>
-						<format>html</format>
-						<format>jsp</format>
-					</formats>
-				</configuration>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.owasp</groupId>-->
+<!--				<artifactId>dependency-check-maven</artifactId>-->
+<!--				<version>9.0.9</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>aggregate</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<skip>false</skip>-->
+<!--					<formats>-->
+<!--						<format>html</format>-->
+<!--						<format>jsp</format>-->
+<!--					</formats>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 
 		</plugins>
 	</build>

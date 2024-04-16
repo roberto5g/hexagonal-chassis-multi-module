@@ -5,20 +5,26 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "boards", schema = "myapp")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-@Entity
-@Table(name = "boards")
 public class BoardEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
     private String description;
+
     private Long ownerId;
+
     private LocalDateTime createdAt;
+
     private LocalDateTime updatedAt;
 }

@@ -3,6 +3,8 @@ package com.robertogs.mytasks.board.configs;
 import com.robertogs.mytasks.board.BoardServiceApplication;
 import com.robertogs.mytasks.board.core.usecase.FindBoardByIdUseCase;
 import com.robertogs.mytasks.board.core.usecase.InsertBoardUseCase;
+import com.robertogs.mytasks.board.integrations.TaskClient;
+import com.robertogs.mytasks.board.integrations.adapters.TaskClientAdapter;
 import com.robertogs.mytasks.board.persistence.adapters.FindBoardByIdAdapter;
 import com.robertogs.mytasks.board.persistence.adapters.InsertBoardAdapter;
 import com.robertogs.mytasks.board.persistence.repositories.BoardJpaRepository;
@@ -38,6 +40,11 @@ public class AppBeansConfig {
     @Bean
     public FindBoardByIdOutputPort findBoardByIdOutputPort(BoardJpaRepository boardJpaRepository){
         return new FindBoardByIdAdapter(boardJpaRepository);
+    }
+
+    @Bean
+    public FindTasksByBoardIdOutputPort findTasksByBoardId(TaskClient taskClient){
+        return new TaskClientAdapter(taskClient);
     }
 
 }

@@ -6,9 +6,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Builder
 public class BoardResponse {
     private Long id;
-    private String name;
+    private String title;
     private String description;
 }

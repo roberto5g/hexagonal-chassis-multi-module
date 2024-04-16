@@ -1,9 +1,8 @@
 package com.robertogs.mytasks.board.rest.mapper;
 
-import com.robertogs.mytasks.board.core.models.User;
+import com.robertogs.mytasks.board.core.models.Board;
 import com.robertogs.mytasks.board.rest.dto.request.BoardRequest;
 import com.robertogs.mytasks.board.rest.dto.response.BoardResponse;
-import com.robertogs.mytasks.board.core.models.Board;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

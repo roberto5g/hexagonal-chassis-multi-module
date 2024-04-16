@@ -20,8 +20,8 @@ public class BoardController {
     private final InsertBoardInputPort insertBoardInputPort;
     private final FindBoardByIdInputPort findBoardByIdInputPort;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<BoardResponse> getBoardById(@PathVariable final Long id){
+    @GetMapping("/{boardId}")
+    public ResponseEntity<BoardResponse> getBoardById(@PathVariable("boardId") final Long id){
         final var board = findBoardByIdInputPort.findById(id);
         return ResponseEntity.status(HttpStatus.OK).body(BoardMapper.INSTANCE.toBoardResponse(board));
     }

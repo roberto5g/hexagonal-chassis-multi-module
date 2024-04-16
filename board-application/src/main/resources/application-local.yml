@@ -1,14 +1,15 @@
 spring:
   datasource:
-    username: postgres
+    username: myapp
     url: jdbc:postgresql://localhost:5432/boardservice
-    password: postgres
+    password: password
     driver-class-name: org.postgresql.Driver
   jpa:
-    database-plataform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show_sql: true
     properties:
       hibernate:
         format_sql: 'true'
-        show_sql: 'true'
+        default_schema: myapp
     hibernate:
       ddl-auto: update

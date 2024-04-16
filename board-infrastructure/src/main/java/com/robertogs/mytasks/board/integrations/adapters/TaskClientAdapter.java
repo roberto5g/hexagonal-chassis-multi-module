@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskClientAdapter implements FindTasksByBoardIdOutputPort {
 
-    private TaskClient taskClient;
+    private final TaskClient taskClient;
 
     @Override
     public List<Task> findByBoardId(final Long boardId) {

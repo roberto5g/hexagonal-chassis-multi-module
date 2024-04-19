@@ -1,12 +1,16 @@
 package com.robertogs.mytasks.board.integrations.dtos.responses;
 
+import com.robertogs.mytasks.board.core.enums.StatusTask;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Date;
 
 @Getter
-@Builder
+@Setter
 public class TaskResponse {
     private Long id;
-    private String name;
+    private String title;
     private String description;
 }

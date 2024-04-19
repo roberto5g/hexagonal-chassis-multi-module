@@ -1,8 +1,11 @@
 #!/bin/bash
 
-#sh build.sh
+sh build.sh
 
 docker-compose down
 docker system prune -f
+docker kill $(docker ps -q)
 
-docker-compose up
+cd ./docker
+
+docker-compose up -d --build

@@ -13,3 +13,7 @@ spring:
         default_schema: myapp
     hibernate:
       ddl-auto: update
+
+endpoint:
+  task:
+    url: http://localhost:8001

@@ -3,8 +3,11 @@ version: '3.8'
 services:
   board-service:
     build:
-      context: ../board-application/
+      context: ../../
+      dockerfile: ${PWD}/Dockerfile
     container_name: board_service
+    environment:
+      - JAVA_OPTS=-Dspring.profiles.active=local
     restart: always
     ports:
       - "8080:8080"
@@ -28,7 +31,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ./database:/docker-entrypoint-initdb.d
+      - ../database:/docker-entrypoint-initdb.d
 
 networks:
   app-network:

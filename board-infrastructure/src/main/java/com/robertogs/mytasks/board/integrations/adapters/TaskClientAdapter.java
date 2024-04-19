@@ -6,11 +6,11 @@ import com.robertogs.mytasks.board.mapper.TaskMapper;
 import com.robertogs.mytasks.board.ports.out.integrations.FindTasksByBoardIdOutputPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Slf4j
 @Component
 @RequiredArgsConstructor
 public class TaskClientAdapter implements FindTasksByBoardIdOutputPort {

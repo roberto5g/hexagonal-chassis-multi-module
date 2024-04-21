@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Board {
-
     private Long id;
     private String title;
     private String description;

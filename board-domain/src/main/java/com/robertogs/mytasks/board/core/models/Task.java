@@ -12,7 +12,7 @@ public class Task {
     private String description;
     private StatusTask status;
     private Date dueDate;
-    private User creator;
+    private User author;
     private User assignee;
     private Board board;
     private List<Comment> comments;
@@ -59,12 +59,12 @@ public class Task {
         this.dueDate = dueDate;
     }
 
-    public User getCreator() {
-        return creator;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setCreator(User creator) {
-        this.creator = creator;
+    public void setAuthor(User author) {
+        this.author = author;
     }
 
     public User getAssignee() {

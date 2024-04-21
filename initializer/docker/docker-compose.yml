@@ -7,7 +7,7 @@ services:
       dockerfile: ${PWD}/Dockerfile
     container_name: board_service
     environment:
-      - JAVA_OPTS=-Dspring.profiles.active=local
+      - JAVA_OPTS=-Dspring.profiles.active=docker
     restart: always
     ports:
       - "8080:8080"

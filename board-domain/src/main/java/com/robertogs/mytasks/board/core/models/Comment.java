@@ -5,8 +5,7 @@ import java.time.LocalDateTime;
 public class Comment {
     private Long id;
     private String description;
-    private User creator;
-    private Task task;
+    private User author;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -26,20 +25,12 @@ public class Comment {
         this.description = description;
     }
 
-    public User getCreator() {
-        return creator;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setCreator(User creator) {
-        this.creator = creator;
-    }
-
-    public Task getTask() {
-        return task;
-    }
-
-    public void setTask(Task task) {
-        this.task = task;
+    public void setAuthor(User author) {
+        this.author = author;
     }
 
     public LocalDateTime getCreatedAt() {
